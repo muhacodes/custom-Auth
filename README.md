@@ -52,19 +52,22 @@ This endpoint returns a list of all users. To access this endpoint, you will nee
 The API will return the list of users in the following format:
 
 
+        {
+        "users":     [
+         {
+                "email": "user1@example.com",
+                "username": "user1"
+            },
             {
-            "users":     [
-             {
-                    "email": "user1@example.com",
-                    "username": "user1"
-                },
-                {
-                    "email": "user2@example.com",
-                    "username": "user2"
-                }
-            ]
-        }
+                "email": "user2@example.com",
+                "username": "user2"
+            }
+        ]
+    }
 
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 
