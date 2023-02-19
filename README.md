@@ -26,7 +26,7 @@ This will start the server on http://localhost:8000/.
 Endpoints
 
 Authentication
-POST /api/login/
+POST /auth/users/login/
 This endpoint allows users to log in with their email and password. The request should be in the following format:
     
     {
@@ -44,7 +44,7 @@ If the login is successful, the API will return a token that can be used for aut
 
 Users
 
-GET /api/users/
+GET /auth/users/
 This endpoint returns a list of all users. To access this endpoint, you will need to include the authentication token in the request headers. The token should be in the following format:
 
     Authorization: Token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
