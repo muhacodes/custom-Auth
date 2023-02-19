@@ -66,6 +66,28 @@ The API will return the list of users in the following format:
     }
 
 
+
+To test the API without installing it on your local computer, you can use the provided API endpoint to log in and get a token. Please note that the token is set to expire in 1 minute.
+
+To obtain a token, use the following endpoint:
+    
+    https://muhacodescustomauth.pythonanywhere.com/auth/user/login
+
+Provide the following details for login:
+
+    email: admin@gmail.com
+    password: admin@123
+    
+Once you have obtained the token, you can use it to retrieve all the users by accessing the following endpoint:
+
+    https://muhacodescustomauth.pythonanywhere.com/auth/users
+  
+
+Remember to provide the token you obtained earlier in the request headers to access this endpoint.
+
+
+
+
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
