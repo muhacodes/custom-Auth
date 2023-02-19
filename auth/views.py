@@ -8,6 +8,7 @@ from account.models import User
 from .serializers import UserSerializer, CustomAuthTokenSerializer
 from .authentication import customAuthentication, CustomTokenAuthentication
 from django.utils import timezone
+from rest_framework import status
 
 class getAllUsers(APIView):
     authentication_classes = [CustomTokenAuthentication]
