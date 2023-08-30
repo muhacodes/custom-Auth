@@ -10,6 +10,8 @@ project/try.txt
 test.txt
 media
 
+project/settings.py
+
 # Backup files # 
 *.bak 
 
