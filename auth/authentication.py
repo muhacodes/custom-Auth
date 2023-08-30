@@ -44,7 +44,7 @@ class CustomTokenAuthentication(TokenAuthentication):
 
         # Check token expiry time
         time_elapsed = timezone.now() - token.created
-        if time_elapsed > timedelta(minutes=1): # set token expiry time to 1 minute
+        if time_elapsed > timedelta(minutes=30): # set token expiry time to 1 minute
             token.delete()
             raise AuthenticationFailed('Token has expired')
 

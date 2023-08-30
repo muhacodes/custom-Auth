@@ -44,9 +44,11 @@ class User(AbstractBaseUser):
 
 	objects 		= UserManager()
 	email			= models.EmailField(verbose_name="email field", max_length=254, unique=True)
-	first_name 		= models.CharField(max_length=250, null=True)
-	last_name		= models.CharField(max_length=250, null=True)
-	username		= models.CharField(max_length=30, null=True, blank=True)
+	photo 			= models.ImageField(upload_to='uploads/users/', blank=True, null=True)
+	address 		= models.CharField(max_length=250, null=True, blank=True)
+	tel 		= models.CharField(max_length=14, null=True, blank=True)
+	name 			= models.CharField(max_length=250, null=True, blank=True)
+	username		= models.CharField(max_length=30,)
 	active 			= models.BooleanField(default=True)
 	staff 			= models.BooleanField(default=False) # a admin user; non super-user
 	admin 			= models.BooleanField(default=False) # a superuser
@@ -56,7 +58,7 @@ class User(AbstractBaseUser):
 	REQUIRED_FIELDS = ['username']
 
 	def __str__(self):
-		return self.username
+		return self.username	
 
 
 	def has_perm(self, perm, obj=None):
